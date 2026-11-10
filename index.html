@@ -14,198 +14,6 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-   
-/* =========================
-   ELEGANT DECORATIONS
-========================= */
-
-section {
-  position: relative;
-  overflow: hidden;
-}
-
-/* Ornamen sudut */
-
-section::before,
-section::after {
-  content: "✧";
-  position: absolute;
-  color: var(--gold);
-  opacity: .55;
-  font-size: 25px;
-}
-
-section::before {
-  top: 25px;
-  left: 20px;
-}
-
-section::after {
-  bottom: 25px;
-  right: 20px;
-}
-
-/* Garis dekoratif */
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 55px;
-  height: 1px;
-  background: var(--gold);
-  margin: 15px auto 0;
-}
-
-/* Reveal animation */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(35px);
-  transition:
-    opacity 1s ease,
-    transform 1s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hover gallery */
-
-.gallery-grid img {
-  cursor: pointer;
-  transition: transform .4s ease;
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.035);
-}
-
-/* Frame detail */
-
-.event-card {
-  outline: 1px solid rgba(182,154,105,.25);
-  outline-offset: 5px;
-}
-
-/* Hero decoration */
-
-.hero {
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 18px;
-  border: 1px solid rgba(182,154,105,.5);
-  pointer-events: none;
-}
-
-/* Mobile adjustment */
-
-@media(max-width:480px) {
-  section::before {
-    top: 12px;
-    left: 12px;
-  }
-
-  section::after {
-    bottom: 12px;
-    right: 12px;
-  }
-}
-
-   
-/* =========================
-   INTERACTIVE LIGHTBOX
-========================= */
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 2000;
-  background: rgba(25, 21, 19, .94);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-
-  opacity: 0;
-  visibility: hidden;
-  transition: .4s ease;
-}
-
-.lightbox.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 80vh;
-  object-fit: contain;
-  border: 5px solid #d8c2b2;
-  box-shadow: 0 10px 40px rgba(0,0,0,.4);
-  transition: .3s;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  color: white;
-  background: transparent;
-  border: none;
-  font-size: 35px;
-}
-
-.lightbox-prev,
-.lightbox-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(182,154,105,.8);
-  color: white;
-  border: none;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  font-size: 22px;
-}
-
-.lightbox-prev {
-  left: 15px;
-}
-
-.lightbox-next {
-  right: 15px;
-}
-
-.lightbox-counter {
-  position: absolute;
-  bottom: 25px;
-  color: white;
-  font-size: 12px;
-  letter-spacing: 3px;
-}
-
-@media(max-width:480px) {
-  .lightbox img {
-    max-width: 95%;
-    max-height: 70vh;
-  }
-
-  .lightbox-prev {
-    left: 8px;
-  }
-
-  .lightbox-next {
-    right: 8px;
-  }
-}
-   
 <style>
 
 /* =========================
@@ -689,6 +497,198 @@ footer p {
   }
 }
 
+   
+/* =========================
+   ELEGANT DECORATIONS
+========================= */
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ornamen sudut */
+
+section::before,
+section::after {
+  content: "✧";
+  position: absolute;
+  color: var(--gold);
+  opacity: .55;
+  font-size: 25px;
+}
+
+section::before {
+  top: 25px;
+  left: 20px;
+}
+
+section::after {
+  bottom: 25px;
+  right: 20px;
+}
+
+/* Garis dekoratif */
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+  margin: 15px auto 0;
+}
+
+/* Reveal animation */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover gallery */
+
+.gallery-grid img {
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.035);
+}
+
+/* Frame detail */
+
+.event-card {
+  outline: 1px solid rgba(182,154,105,.25);
+  outline-offset: 5px;
+}
+
+/* Hero decoration */
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(182,154,105,.5);
+  pointer-events: none;
+}
+
+/* Mobile adjustment */
+
+@media(max-width:480px) {
+  section::before {
+    top: 12px;
+    left: 12px;
+  }
+
+  section::after {
+    bottom: 12px;
+    right: 12px;
+  }
+}
+
+   
+/* =========================
+   INTERACTIVE LIGHTBOX
+========================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(25, 21, 19, .94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 5px solid #d8c2b2;
+  box-shadow: 0 10px 40px rgba(0,0,0,.4);
+  transition: .3s;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 35px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(182,154,105,.8);
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.lightbox-prev {
+  left: 15px;
+}
+
+.lightbox-next {
+  right: 15px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 25px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+@media(max-width:480px) {
+  .lightbox img {
+    max-width: 95%;
+    max-height: 70vh;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+}
+   
 </style>
 </head>
 
