@@ -1,0 +1,1310 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f4ef">
+
+<title>Undangan Wisuda | Lola Tiara Tamnge, S.H.</title>
+
+<!-- GOOGLE FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   ROOT & GLOBAL
+========================= */
+
+:root {
+  --ivory: #f8f4ef;
+  --cream: #eee5dc;
+  --nude: #d8c2b2;
+  --gold: #b69a69;
+  --gold-dark: #94764c;
+  --brown: #55463e;
+  --text: #665950;
+  --white: #fffdf9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--text);
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =========================
+   COVER / SAMPUL
+========================= */
+
+.cover {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+
+  background: linear-gradient(145deg, #fffdf9 0%, #f8f4ef 58%, #efe6dc 100%);
+
+  transition: opacity .9s ease, visibility .9s;
+}
+
+.cover.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cover-content {
+  width: 100%;
+  max-width: 420px;
+  padding: 45px 25px;
+  border: 1px solid var(--gold);
+  outline: 1px solid rgba(182,154,105,.35);
+  outline-offset: 8px;
+  background: rgba(255,253,249,.75);
+  backdrop-filter: blur(8px);
+}
+
+.cover-line {
+  width: 65px;
+  height: 1px;
+  background: var(--gold);
+  margin: 20px auto;
+}
+
+.cover small {
+  letter-spacing: 4px;
+  color: var(--gold-dark);
+  font-size: 10px;
+}
+
+.cover h1 {
+  font-size: clamp(32px, 9vw, 46px);
+  color: var(--brown);
+  margin: 18px 0;
+}
+
+.cover p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.cover-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px !important;
+  color: var(--gold-dark);
+  margin: 20px 0;
+}
+
+.open-btn {
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: white;
+  padding: 14px 32px;
+  letter-spacing: 2px;
+  font-size: 11px;
+  margin-top: 25px;
+  transition: .3s;
+}
+
+.open-btn:hover {
+  background: transparent;
+  color: var(--gold-dark);
+}
+
+/* =========================
+   MAIN WEBSITE
+========================= */
+
+#main {
+  display: none;
+  animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+section {
+  padding: 75px 22px;
+  text-align: center;
+}
+
+.section-label {
+  color: var(--gold-dark);
+  letter-spacing: 4px;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 33px;
+  color: var(--brown);
+  margin-bottom: 20px;
+}
+
+.section-desc {
+  max-width: 450px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 20px;
+
+  background: linear-gradient(150deg, #fffdf9 0%, #f8f4ef 65%, #eee5dc 100%);
+}
+
+.hero h1 {
+  font-size: clamp(38px, 10vw, 65px);
+  color: var(--brown);
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.hero .graduate {
+  color: var(--gold-dark);
+  font-size: 18px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-date {
+  margin-top: 20px;
+  letter-spacing: 3px;
+  font-size: 11px;
+}
+
+/* =========================
+   ORNAMENT
+========================= */
+
+.ornament {
+  color: var(--gold);
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+  background: var(--white);
+}
+
+.quote blockquote {
+  max-width: 500px;
+  margin: auto;
+  font-family: 'Playfair Display', serif;
+  font-size: 21px;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--brown);
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section {
+  background: var(--cream);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.time-box {
+  width: 72px;
+  padding: 18px 5px;
+  background: var(--white);
+  border: 1px solid rgba(182,154,105,.5);
+}
+
+.time-box span {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 27px;
+  color: var(--gold-dark);
+}
+
+.time-box small {
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   DETAIL ACARA
+========================= */
+
+.event-card {
+  max-width: 450px;
+  margin: 30px auto 0;
+  background: var(--white);
+  padding: 35px 20px;
+  border: 1px solid rgba(182,154,105,.5);
+}
+
+.event-item {
+  padding: 17px 0;
+  border-bottom: 1px solid var(--cream);
+}
+
+.event-item:last-child {
+  border: none;
+}
+
+.event-item h3 {
+  font-size: 20px;
+  color: var(--gold-dark);
+  margin-bottom: 8px;
+}
+
+.event-item p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.gold-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 13px 25px;
+  color: white;
+  background: var(--gold);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   GALERI
+========================= */
+
+.gallery {
+  background: var(--cream);
+}
+
+.gallery-grid {
+  max-width: 600px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border: 5px solid var(--white);
+  box-shadow: 0 4px 15px rgba(0,0,0,.06);
+}
+
+.gallery-grid img:first-child {
+  grid-row: span 2;
+  height: 432px;
+}
+
+   
+<!-- LIGHTBOX CSS BERADA DI BAWAH -->
+   
+/* =========================
+   RSVP
+========================= */
+
+.rsvp-form {
+  max-width: 450px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  background: var(--white);
+  border: 1px solid var(--nude);
+  outline: none;
+  color: var(--brown);
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.rsvp-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.rsvp-form button {
+  width: 100%;
+  padding: 15px;
+  background: var(--gold);
+  border: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: var(--brown);
+  color: var(--ivory);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+footer h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 11px;
+  line-height: 2;
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 900;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: var(--white);
+  color: var(--gold-dark);
+  font-size: 19px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.12);
+}
+
+
+/* =========================
+   FLORAL IVORY FINISH
+========================= */
+.cover::before,
+.cover::after {
+  content: "❧";
+  position: absolute;
+  color: rgba(182,154,105,.48);
+  font-family: 'Playfair Display', serif;
+  font-size: 58px;
+  pointer-events: none;
+}
+.cover::before { top: 24px; left: 22px; transform: rotate(-35deg); }
+.cover::after { bottom: 24px; right: 22px; transform: rotate(145deg); }
+.cover-content { position: relative; }
+.guest-address { margin-top: 18px; color: var(--text); font-size: 12px; letter-spacing: 1px; }
+.guest-name { margin-top: 6px; color: var(--gold-dark); font-family: 'Playfair Display', serif; font-size: 20px; overflow-wrap: anywhere; }
+.guest-place { margin-top: 3px; color: var(--text); font-size: 11px; }
+.hero { background-image: radial-gradient(ellipse at 10% 15%, rgba(182,154,105,.10), transparent 35%), radial-gradient(ellipse at 90% 85%, rgba(182,154,105,.10), transparent 35%), linear-gradient(150deg, #fffdf9 0%, #f8f4ef 65%, #eee5dc 100%); }
+.hero::after { content: "❧"; position: absolute; right: 28px; bottom: 28px; color: rgba(182,154,105,.35); font-size: 54px; transform: rotate(145deg); pointer-events: none; }
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (min-width: 768px) {
+  section {
+    padding: 100px 30px;
+  }
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid img:first-child {
+    grid-row: auto;
+    height: 260px;
+  }
+
+  .gallery-grid img {
+    height: 260px;
+  }
+}
+
+   
+/* =========================
+   ELEGANT DECORATIONS
+========================= */
+
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ornamen sudut */
+
+section::before,
+section::after {
+  content: "✧";
+  position: absolute;
+  color: var(--gold);
+  opacity: .55;
+  font-size: 25px;
+}
+
+section::before {
+  top: 25px;
+  left: 20px;
+}
+
+section::after {
+  bottom: 25px;
+  right: 20px;
+}
+
+/* Garis dekoratif */
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+  margin: 15px auto 0;
+}
+
+/* Reveal animation */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover gallery */
+
+.gallery-grid img {
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.035);
+}
+
+/* Frame detail */
+
+.event-card {
+  outline: 1px solid rgba(182,154,105,.25);
+  outline-offset: 5px;
+}
+
+/* Hero decoration */
+
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(182,154,105,.5);
+  pointer-events: none;
+}
+
+/* Mobile adjustment */
+
+@media(max-width:480px) {
+  section::before {
+    top: 12px;
+    left: 12px;
+  }
+
+  section::after {
+    bottom: 12px;
+    right: 12px;
+  }
+}
+
+   
+/* =========================
+   INTERACTIVE LIGHTBOX
+========================= */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(25, 21, 19, .94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 5px solid #d8c2b2;
+  box-shadow: 0 10px 40px rgba(0,0,0,.4);
+  transition: .3s;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  background: transparent;
+  border: none;
+  font-size: 35px;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(182,154,105,.8);
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.lightbox-prev {
+  left: 15px;
+}
+
+.lightbox-next {
+  right: 15px;
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 25px;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+@media(max-width:480px) {
+  .lightbox img {
+    max-width: 95%;
+    max-height: 70vh;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+}
+   
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     SAMPUL UNDANGAN
+========================= -->
+
+<div class="cover" id="cover">
+
+  <div class="cover-content">
+
+    <small>THE GRADUATION CELEBRATION</small>
+
+    <div class="cover-line"></div>
+
+    <h1>Undangan<br>Wisuda</h1>
+
+    <p>Dengan penuh rasa syukur dan bahagia,</p>
+
+    <div class="guest-address">Kepada Yth.</div>
+    <div class="guest-name" id="guestDisplay">Bapak/Ibu/Saudara/i</div>
+    <div class="guest-place">Di tempat</div>
+
+    <div class="cover-name">
+     Lola Tiara Tamnge 
+    </div>
+
+    <p>
+      Merupakan suatu kehormatan bagi kami
+      apabila Anda berkenan hadir.
+    </p>
+
+    <button class="open-btn" onclick="openInvitation()">
+      BUKA UNDANGAN
+    </button>
+
+    <div class="cover-line"></div>
+
+    <small>YOU ARE CORDIALLY INVITED</small>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     MUSIK
+========================= -->
+
+<audio id="bgMusic" loop>
+  <source src="musik-baru.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn"
+  onclick="toggleMusic()" style="display:none">
+  ♫
+</button>
+
+
+<!-- =========================
+     WEBSITE UTAMA
+========================= -->
+
+<main id="main">
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="section-label">
+      A Special Moment
+    </div>
+
+    <div class="ornament">✦</div>
+
+    <p class="graduate">
+      The Graduation Of
+    </p>
+
+    <h1>Lola Tiara Tamnge, S.H <br> wisudawan </h1>
+
+    <div class="ornament">❦</div>
+
+    <p class="hero-date">
+      12 November 2026
+    </p>
+
+  </section>
+
+
+  <!-- UCAPAN -->
+
+  <section class="quote">
+
+    <div class="section-label">
+      Alhamdulillah
+    </div>
+
+    <h2 class="section-title">
+      Sebuah Pencapaian
+    </h2>
+
+    <div class="ornament">✦</div>
+
+    <blockquote>
+      "Setiap perjalanan memiliki ceritanya
+      sendiri. Hari ini bukan akhir dari
+      perjalanan, melainkan awal dari
+      langkah menuju masa depan."
+    </blockquote>
+
+    <div class="ornament">✦</div>
+
+    <p class="section-desc">
+      Dengan penuh rasa syukur atas segala
+      rahmat dan karunia Tuhan Yang Maha Esa,
+      kami mengundang Anda untuk turut
+      menyaksikan momen bahagia ini.
+    </p>
+
+  </section>
+
+
+  <!-- COUNTDOWN -->
+
+  <section class="countdown-section">
+
+    <div class="section-label">
+      Save The Date
+    </div>
+
+    <h2 class="section-title">
+      Menuju Hari Wisuda
+    </h2>
+
+    <p class="section-desc">
+      Menghitung hari menuju momen istimewa.
+    </p>
+
+    <div class="countdown">
+
+      <div class="time-box">
+        <span id="days">00</span>
+        <small>HARI</small>
+      </div>
+
+      <div class="time-box">
+        <span id="hours">00</span>
+        <small>JAM</small>
+      </div>
+
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <small>MENIT</small>
+      </div>
+
+      <div class="time-box">
+        <span id="seconds">00</span>
+        <small>DETIK</small>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DETAIL ACARA -->
+
+  <section>
+
+    <div class="section-label">
+      Event Details
+    </div>
+
+    <h2 class="section-title">
+      Detail Acara
+    </h2>
+
+    <div class="event-card">
+
+      <div class="event-item">
+        <h3>Hari & Tanggal</h3>
+        <p>Kamis, 12 November 2026</p>
+      </div>
+
+      <div class="event-item">
+        <h3>Waktu</h3>
+        <p>13.30 WIT – Selesai</p>
+      </div>
+
+      <div class="event-item">
+        <h3>Lokasi</h3>
+        <p>Dusun Dumar</p>
+        <p>Kediaman Bpk. Saban Tamnge</p>
+      </div>
+
+      <a
+        class="gold-btn"
+        href="https://www.google.com/maps/search/?api=1&query=Dusun+Dumar%2C+Kediaman+Bpk.+Saban+Tamnge"
+        target="_blank"
+        rel="noopener">
+        BUKA GOOGLE MAPS
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALERI FOTO -->
+
+  <section class="gallery">
+
+    <div class="section-label">
+      Our Memories
+    </div>
+
+    <h2 class="section-title">
+      Galeri Foto
+    </h2>
+
+    <p class="section-desc">
+      Beberapa potongan perjalanan
+      menuju hari yang istimewa.
+    </p>
+
+    <div class="gallery-grid">
+
+      <img
+        src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700"
+        alt="Momen wisuda 1">
+
+      <img
+        src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=500"
+        alt="Momen wisuda 2">
+
+      <img
+        src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=500"
+        alt="Momen wisuda 3">
+
+      <img
+        src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=500"
+        alt="Momen wisuda 4">
+
+    </div>
+
+  </section>
+
+
+<!-- LIGHTBOX FOTO -->
+
+<div class="lightbox" id="lightbox">
+
+  <button class="lightbox-close"
+    onclick="closeLightbox()">
+    &times;
+  </button>
+
+  <button class="lightbox-prev"
+    onclick="changePhoto(-1)">
+    &#10094;
+  </button>
+
+  <img id="lightboxImage" src="" alt="Foto galeri">
+
+  <button class="lightbox-next"
+    onclick="changePhoto(1)">
+    &#10095;
+  </button>
+
+  <div class="lightbox-counter" id="photoCounter">
+    1 / 4
+  </div>
+
+</div>
+
+
+    <!-- RSVP -->
+
+  <section>
+
+    <div class="section-label">
+      Wishes & Confirmation
+    </div>
+
+    <h2 class="section-title">
+      Ucapan & Kehadiran
+    </h2>
+
+    <p class="section-desc">
+      Silakan tinggalkan ucapan dan
+      konfirmasi kehadiran Anda.
+    </p>
+
+    <form class="rsvp-form" id="rsvpForm">
+
+      <input
+        type="text"
+        id="guestName"
+        placeholder="Nama Anda"
+        required>
+
+      <select id="attendance" required>
+        <option value="">Konfirmasi Kehadiran</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
+      </select>
+
+      <textarea
+        id="message"
+        placeholder="Tuliskan ucapan dan doa..."
+        required></textarea>
+
+      <button type="submit">
+        KIRIM UCAPAN
+      </button>
+
+    </form>
+
+    <p id="response"
+      style="margin-top:20px;font-size:13px">
+    </p>
+
+  </section>
+
+
+  <!-- PENUTUP -->
+
+  <footer>
+
+    <div class="ornament">✦</div>
+
+    <h2>Terima Kasih</h2>
+
+    <p>
+      Merupakan kebahagiaan tersendiri
+      bagi kami atas kehadiran dan doa Anda.
+    </p>
+
+    <br>
+
+    <h2>Lola Tiara Tamnge</h2>
+
+    <p>
+      With Love & Gratitude
+      <br>
+      © 2026 Graduation Invitation
+    </p>
+
+  </footer>
+
+</main>
+
+
+<script>
+
+/* =========================
+   KONFIGURASI ACARA
+========================= */
+
+// Ganti tanggal sesuai hari wisuda.
+// Format: TAHUN, BULAN-1, TANGGAL, JAM, MENIT
+
+// 12 November 2026, pukul 13.30 WIT (UTC+9)
+const eventDate = new Date('2026-11-12T13:30:00+09:00').getTime();
+
+// Nama penerima diambil dari alamat link: ?to=Nama
+const guestParam = new URLSearchParams(window.location.search).get('to');
+const guestName = guestParam ? guestParam.replace(/\+/g, ' ').trim() : '';
+const guestDisplay = document.getElementById('guestDisplay');
+if (guestName && guestDisplay) {
+  guestDisplay.textContent = guestName;
+}
+
+
+/* =========================
+   BUKA UNDANGAN
+========================= */
+
+function openInvitation() {
+
+  document.getElementById('cover')
+    .classList.add('hidden');
+
+  document.getElementById('main')
+    .style.display = 'block';
+
+  document.getElementById('musicBtn')
+    .style.display = 'block';
+
+  const music = document.getElementById('bgMusic');
+
+  music.play().then(() => {
+    document.getElementById('musicBtn').textContent = '♫';
+  }).catch(() => {
+    document.getElementById('musicBtn').textContent = '♪';
+  });
+
+  window.scrollTo(0, 0);
+
+}
+
+
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+function toggleMusic() {
+
+  const music = document.getElementById('bgMusic');
+  const button = document.getElementById('musicBtn');
+
+  if (music.paused) {
+
+    music.play().then(() => {
+      button.textContent = '♫';
+    }).catch(() => {
+      button.textContent = '♪';
+    });
+
+  } else {
+
+    music.pause();
+    button.textContent = '♪';
+
+  }
+
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+function updateCountdown() {
+
+  const now = new Date().getTime();
+  const distance = eventDate - now;
+
+  if (distance <= 0) {
+
+    document.querySelector('.countdown').innerHTML =
+      '<h3>Hari Wisuda Telah Tiba!</h3>';
+
+    return;
+
+  }
+
+  const days = Math.floor(
+    distance / (1000 * 60 * 60 * 24)
+  );
+
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) /
+    (1000 * 60 * 60)
+  );
+
+  const minutes = Math.floor(
+    (distance % (1000 * 60 * 60)) /
+    (1000 * 60)
+  );
+
+  const seconds = Math.floor(
+    (distance % (1000 * 60)) / 1000
+  );
+
+  document.getElementById('days').textContent = days;
+  document.getElementById('hours').textContent = hours;
+  document.getElementById('minutes').textContent = minutes;
+  document.getElementById('seconds').textContent = seconds;
+
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+
+/* =========================
+   RSVP FORM
+========================= */
+
+document.getElementById('rsvpForm')
+  .addEventListener('submit', function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById('guestName').value;
+    const attendance = document.getElementById('attendance').value;
+    const message = document.getElementById('message').value;
+
+    const response = document.getElementById('response');
+
+    response.textContent =
+      'Terima kasih, ' + name +
+      '! Konfirmasi Anda: ' + attendance +
+      '. Ucapan Anda telah ditampilkan secara lokal.';
+
+    this.reset();
+
+  });
+
+   
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements = document.querySelectorAll(
+  'section .section-label, section .section-title, section .section-desc, section .event-card, section .gallery-grid, section .countdown, section blockquote, section .rsvp-form, section .ornament'
+);
+
+revealElements.forEach(element => {
+  element.classList.add('reveal');
+});
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.15
+  }
+);
+
+revealElements.forEach(element => {
+  revealObserver.observe(element);
+});
+
+   
+/* =========================
+   LIGHTBOX GALLERY
+========================= */
+
+const galleryImages = document.querySelectorAll(
+  '.gallery-grid img'
+);
+
+let currentPhoto = 0;
+
+function openLightbox(index) {
+
+  currentPhoto = index;
+
+  showPhoto();
+
+  document.getElementById('lightbox')
+    .classList.add('active');
+
+  document.body.style.overflow = 'hidden';
+
+}
+
+function closeLightbox() {
+
+  document.getElementById('lightbox')
+    .classList.remove('active');
+
+  document.body.style.overflow = '';
+
+}
+
+function showPhoto() {
+
+  const image = document.getElementById(
+    'lightboxImage'
+  );
+
+  image.src = galleryImages[currentPhoto].src;
+
+  document.getElementById('photoCounter')
+    .textContent =
+    (currentPhoto + 1) + ' / ' +
+    galleryImages.length;
+
+}
+
+function changePhoto(direction) {
+
+  currentPhoto += direction;
+
+  if (currentPhoto >= galleryImages.length) {
+    currentPhoto = 0;
+  }
+
+  if (currentPhoto < 0) {
+    currentPhoto = galleryImages.length - 1;
+  }
+
+  showPhoto();
+
+}
+
+galleryImages.forEach((image, index) => {
+  image.addEventListener('click', () => openLightbox(index));
+});
+
+// Tutup menggunakan tombol Escape
+
+document.addEventListener('keydown', event => {
+
+  if (!document.getElementById('lightbox')
+      .classList.contains('active')) return;
+
+  if (event.key === 'Escape') {
+    closeLightbox();
+  }
+
+  if (event.key === 'ArrowRight') {
+    changePhoto(1);
+  }
+
+  if (event.key === 'ArrowLeft') {
+    changePhoto(-1);
+  }
+
+});
+      
+
+// Tutup lightbox dengan mengetuk area gelap
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+
+</script>
+
+</body>
+</html>
+
