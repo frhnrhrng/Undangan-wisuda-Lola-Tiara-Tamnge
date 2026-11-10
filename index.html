@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#f8f4ef">
 
-<title>Undangan Wisuda Digital</title>
+<title>Undangan Wisuda | Lola Tiara Tamnge, S.H.</title>
 
 <!-- GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,13 +72,7 @@ button {
   text-align: center;
   padding: 25px;
 
-  background:
-    linear-gradient(
-      rgba(248,244,239,.83),
-      rgba(248,244,239,.91)
-    ),
-    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200')
-    center/cover;
+  background: linear-gradient(145deg, #fffdf9 0%, #f8f4ef 58%, #efe6dc 100%);
 
   transition: opacity .9s ease, visibility .9s;
 }
@@ -199,13 +193,7 @@ section {
   justify-content: center;
   padding: 70px 20px;
 
-  background:
-    linear-gradient(
-      rgba(248,244,239,.7),
-      rgba(248,244,239,.9)
-    ),
-    url('https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=1200')
-    center/cover;
+  background: linear-gradient(150deg, #fffdf9 0%, #f8f4ef 65%, #eee5dc 100%);
 }
 
 .hero h1 {
@@ -363,32 +351,7 @@ section {
 }
 
    
-<!-- LIGHTBOX FOTO -->
-
-<div class="lightbox" id="lightbox">
-
-  <button class="lightbox-close"
-    onclick="closeLightbox()">
-    &times;
-  </button>
-
-  <button class="lightbox-prev"
-    onclick="changePhoto(-1)">
-    &#10094;
-  </button>
-
-  <img id="lightboxImage" src="" alt="Foto galeri">
-
-  <button class="lightbox-next"
-    onclick="changePhoto(1)">
-    &#10095;
-  </button>
-
-  <div class="lightbox-counter" id="photoCounter">
-    1 / 4
-  </div>
-
-</div>
+<!-- LIGHTBOX CSS BERADA DI BAWAH -->
    
 /* =========================
    RSVP
@@ -469,6 +432,28 @@ footer p {
   font-size: 19px;
   box-shadow: 0 3px 12px rgba(0,0,0,.12);
 }
+
+
+/* =========================
+   FLORAL IVORY FINISH
+========================= */
+.cover::before,
+.cover::after {
+  content: "❧";
+  position: absolute;
+  color: rgba(182,154,105,.48);
+  font-family: 'Playfair Display', serif;
+  font-size: 58px;
+  pointer-events: none;
+}
+.cover::before { top: 24px; left: 22px; transform: rotate(-35deg); }
+.cover::after { bottom: 24px; right: 22px; transform: rotate(145deg); }
+.cover-content { position: relative; }
+.guest-address { margin-top: 18px; color: var(--text); font-size: 12px; letter-spacing: 1px; }
+.guest-name { margin-top: 6px; color: var(--gold-dark); font-family: 'Playfair Display', serif; font-size: 20px; overflow-wrap: anywhere; }
+.guest-place { margin-top: 3px; color: var(--text); font-size: 11px; }
+.hero { background-image: radial-gradient(ellipse at 10% 15%, rgba(182,154,105,.10), transparent 35%), radial-gradient(ellipse at 90% 85%, rgba(182,154,105,.10), transparent 35%), linear-gradient(150deg, #fffdf9 0%, #f8f4ef 65%, #eee5dc 100%); }
+.hero::after { content: "❧"; position: absolute; right: 28px; bottom: 28px; color: rgba(182,154,105,.35); font-size: 54px; transform: rotate(145deg); pointer-events: none; }
 
 /* =========================
    RESPONSIVE
@@ -710,6 +695,10 @@ section::after {
 
     <p>Dengan penuh rasa syukur dan bahagia,</p>
 
+    <div class="guest-address">Kepada Yth.</div>
+    <div class="guest-name" id="guestDisplay">Bapak/Ibu/Saudara/i</div>
+    <div class="guest-place">Di tempat</div>
+
     <div class="cover-name">
      Lola Tiara Tamnge 
     </div>
@@ -737,7 +726,7 @@ section::after {
 ========================= -->
 
 <audio id="bgMusic" loop>
-  <source src="musik.mp3" type="audio/mpeg">
+  <source src="musik-baru.mp3" type="audio/mpeg">
 </audio>
 
 <button class="music-btn" id="musicBtn"
@@ -879,13 +868,13 @@ section::after {
 
       <div class="event-item">
         <h3>Lokasi</h3>
-        <p>Nama Gedung / Tempat Acara</p>
-        <p>Alamat lengkap lokasi acara</p>
+        <p>Dusun Dumar</p>
+        <p>Kediaman Bpk. Saban Tamnge</p>
       </div>
 
       <a
         class="gold-btn"
-        href="https://www.google.com/maps/search/?api=1&query=Nama+Lokasi"
+        href="https://www.google.com/maps/search/?api=1&query=Dusun+Dumar%2C+Kediaman+Bpk.+Saban+Tamnge"
         target="_blank"
         rel="noopener">
         BUKA GOOGLE MAPS
@@ -936,7 +925,35 @@ section::after {
   </section>
 
 
-  <!-- RSVP -->
+<!-- LIGHTBOX FOTO -->
+
+<div class="lightbox" id="lightbox">
+
+  <button class="lightbox-close"
+    onclick="closeLightbox()">
+    &times;
+  </button>
+
+  <button class="lightbox-prev"
+    onclick="changePhoto(-1)">
+    &#10094;
+  </button>
+
+  <img id="lightboxImage" src="" alt="Foto galeri">
+
+  <button class="lightbox-next"
+    onclick="changePhoto(1)">
+    &#10095;
+  </button>
+
+  <div class="lightbox-counter" id="photoCounter">
+    1 / 4
+  </div>
+
+</div>
+
+
+    <!-- RSVP -->
 
   <section>
 
@@ -1022,9 +1039,16 @@ section::after {
 // Ganti tanggal sesuai hari wisuda.
 // Format: TAHUN, BULAN-1, TANGGAL, JAM, MENIT
 
-const eventDate = new Date(
-  2026, 11, 5, 9, 0, 0
-).getTime();
+// 12 November 2026, pukul 13.30 WIT (UTC+9)
+const eventDate = new Date('2026-11-12T13:30:00+09:00').getTime();
+
+// Nama penerima diambil dari alamat link: ?to=Nama
+const guestParam = new URLSearchParams(window.location.search).get('to');
+const guestName = guestParam ? guestParam.replace(/\+/g, ' ').trim() : '';
+const guestDisplay = document.getElementById('guestDisplay');
+if (guestName && guestDisplay) {
+  guestDisplay.textContent = guestName;
+}
 
 
 /* =========================
@@ -1044,8 +1068,10 @@ function openInvitation() {
 
   const music = document.getElementById('bgMusic');
 
-  music.play().catch(() => {
+  music.play().then(() => {
     document.getElementById('musicBtn').textContent = '♫';
+  }).catch(() => {
+    document.getElementById('musicBtn').textContent = '♪';
   });
 
   window.scrollTo(0, 0);
@@ -1247,11 +1273,7 @@ function changePhoto(direction) {
 }
 
 galleryImages.forEach((image, index) => {
-
-  image.addEventListener('click', () => {
-    openLightbox(index);
-  });
-
+  image.addEventListener('click', () => openLightbox(index));
 });
 
 // Tutup menggunakan tombol Escape
@@ -1275,6 +1297,12 @@ document.addEventListener('keydown', event => {
 
 });
       
+
+// Tutup lightbox dengan mengetuk area gelap
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) closeLightbox();
+});
+
 </script>
 
 </body>
